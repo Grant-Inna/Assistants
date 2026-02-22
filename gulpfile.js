@@ -10,6 +10,7 @@ const gulp = require('gulp'),
       concat = require('gulp-concat'),
       uglify = require('gulp-uglify'),
       jade = require('gulp-jade'),
+      smartgrid = require('smart-grid'),
       less = require('gulp-less');
 
 const isDev = process.argv.indexOf('--dev') !== -1,
@@ -25,6 +26,13 @@ function html(done){
    return gulp.src( base + '*.jade' )
    .pipe(jade({pretty: true}))
    .pipe(gulp.dest( prod ))
+   .pipe(gulpif(isSync, browserSync.stream()));
+   done();
+}
+function todo(done){
+   return gulp.src( base + 'todo/*.jade' )
+   .pipe(jade({pretty: true}))
+   .pipe(gulp.dest( prod + 'todo' ))
    .pipe(gulpif(isSync, browserSync.stream()));
    done();
 }
@@ -77,6 +85,7 @@ function watch(done){
    
    gulp.watch( src + 'css/**/*.less', styles);
    gulp.watch( base + '*.jade', html);
+   gulp.watch( base + 'todo/*.jade', todo);
    gulp.watch( src + 'jade/**/*.jade', html);
    gulp.watch( src + 'data/*', data);
    gulp.watch( src + 'data/**/*', data);
@@ -84,31 +93,26 @@ function watch(done){
    done();
 }
 
-// function grid(done){
-//    smartgrid( src + 'css/base', gridOptions);
-//    done();
-// }
+
 
 const build = gulp.series(clear,
-   gulp.parallel(html, styles, js, data, font )
+   gulp.parallel(html, todo, styles, js, data, font )
 );
 
 gulp.task('build', build);
 gulp.task('watch', gulp.series(build, watch));
-// gulp.task('grid', gulp.parallel(grid));
 gulp.task('font', font);
 gulp.task('js', js);
 gulp.task('data', data);
 
 
-/*
 
 let gridOptions = {
    columns: 24,
-   offset: "60px",
+   offset: "10px",
    // mobileFirst: true,
    container: {
-      maxWidth: "1400px",
+      maxWidth: "1200px",
       fields: "60px" // fields не меньше offset делённого на 2
    },
    breakPoints: {
@@ -116,20 +120,18 @@ let gridOptions = {
          width: "1350px"
       },
       xxl: {
-         width: "1240px"
+         width: "1200px",
+         fields: "40px"
       },
       xl: {
-         width: "1150px",
-         offset: "40px"
+         width: "1150px"
       },
       middle: {
-         width: "1030px",
-         offset: "30px"
+         width: "1030px"
       },
       lg: {
          width: "995px",
-         fields: "40px",
-         offset: "20px"
+         fields: "5vw"
       },
       md: {
          width: "770px"
@@ -138,9 +140,7 @@ let gridOptions = {
          width: "660px"
       },
       sm: {
-         width: "580px",
-         fields: "30px",
-         offset: "10px"
+         width: "580px"
       },
       xs: {
          width: "470px"
@@ -150,4 +150,8 @@ let gridOptions = {
       }
    }
 };
-*/
+function grid(done){
+   smartgrid( src + 'css/base', gridOptions);
+   done();
+}
+gulp.task('grid', gulp.parallel(grid));

@@ -1,0 +1,33 @@
+@width1: 'Bold';
+@width2: 'Medium';
+@width3: 'Regular';
+
+@font-face {
+  font-family: 'GolosText-@{width1}';
+  src: url('../font/Golos/GolosText-@{width1}.ttf') format('truetype');
+   font-weight: 700;
+}
+@font-face {
+  font-family: 'GolosText-@{width2}';
+  src: url('../font/Golos/GolosText-@{width2}.ttf') format('truetype');
+   font-weight: 500;
+}
+@font-face {
+  font-family: 'GolosText-@{width3}';
+  src: url('../font/Golos/GolosText-@{width3}.ttf') format('truetype');
+   font-weight: 400;
+}
+
+
+.golos-bold() {
+  font-family: 'GolosText-@{width1}', Arial, sans-serif;
+  font-weight: 700;
+}
+.golos-medium() {
+  font-family: 'GolosText-@{width2}', Arial, sans-serif;
+  font-weight: 500;
+}
+.golos-regular() {
+  font-family: 'GolosText-@{width3}', Arial, sans-serif;
+  font-weight: 400;
+}
