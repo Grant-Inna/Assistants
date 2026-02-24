@@ -7,5 +7,19 @@ html
    body
       include assets/jade/header/menu
 
-      .wrapper
-         span Контент главной страницы
+      .wrapper.mt7.mb5
+         h1.h1.center Цифровые помощники
+         .project_about.center.mt3 &laquo;Цифровые помощники&raquo;&nbsp;&mdash; это новые федеральные сервисы для&nbsp;учеников, учителей и&nbsp;родителей. Вход доступен через ФГИС &laquo;Моя школа&raquo;, &laquo;ВКонтакте&raquo; или региональные информационные системы
+
+         include assets/jade/content/main/__section
+         section.project_sections__holder.mt4
+            +section( 'Помощник ученика', 'uche', 'https://student.edu.ru/')
+            +section( 'Помощник учителя', 'uchi', 'https://teacher.edu.ru/')
+            +section( 'Помощник родителя', 'rodi', 'https://parent.edu.ru/')
+
+      .block_blue
+         .wrapper.pt6
+            h2.h2.center Преимущества сервисов
+
+
+      include assets/jade/footer/footer
