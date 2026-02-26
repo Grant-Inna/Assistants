@@ -7,5 +7,18 @@ html
    body
       include assets/jade/header/menu
 
-      .wrapper
-         a( href='todo/calendar.html') Ссылка на Календарь
+      .wrapper.mt7.mb5
+         h1.h2 Краткое руководство
+            br
+            | пользователя
+         .user_manual__about.about-gray.about-700 Инструкции и&nbsp;рекомендации по&nbsp;управлению контентом в&nbsp;информационной системе «Цифровые помощники»
+
+         include assets/jade/content/todo/__manual_theme
+         section.user_manual__themes
+            +theme( 'Календарь', 'calendar')
+            +theme( 'Библиотека материалов', 'lib')
+            +theme( 'Курсы повышения квалификации для педагогов (ДППО)', 'dppo')
+            +theme( 'Программы ДО и ПО', 'prog')
+            +theme( 'Рабочий стол', 'desk')
+            +theme( 'Тематические подборки', 'theme')
+            +theme( 'Анкетирование ', 'form')
