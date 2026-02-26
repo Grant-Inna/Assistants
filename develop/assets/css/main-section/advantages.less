@@ -1,0 +1,79 @@
+.advantages__holder {
+   .column();
+   align-items: center;
+   
+   padding-bottom: 5.5rem;
+   
+   .middle-block({
+      display: block;
+   });
+   .smmd-block({
+      padding-bottom: 3rem;
+   });
+}
+.advantage_one__holder {
+   width: 40%;
+   margin-bottom: 35px;
+   
+   &:nth-of-type(odd) {
+      margin-right: 40%;
+   }
+   &:nth-of-type(even) {
+      margin-left: 40%;
+   }
+   
+   .middle-block({
+      width: 70%;
+      
+      &:nth-of-type(odd) {
+         margin-right: 0;
+      }
+      &:nth-of-type(even) {
+         margin-left: 0;
+      }
+   });
+   
+   .md-block({
+      width: 100%;
+   });
+   .smmd-block({
+      .flex();
+      margin-bottom: 60px;
+   });
+   .xxs-block({
+      display: block;
+   });
+
+}
+.advantage_one__numb {
+   color: @color-blue-light2;
+   .golos-bold();
+   font-size: 130px;
+   line-height: 110%;
+   
+   .middle-block({ font-size: 92px; });
+   .smmd-block({ font-size: 48px; });
+}
+.advantage_one__info {
+   padding-left: 110px;
+   
+   .smmd-block({
+      padding-top: 25px;
+      padding-left: 30px;
+   });
+   .sm-block({
+      padding-left: 15px;
+   });
+   .xxs-block({
+      padding-top: 15px;
+      padding-left: 0;
+   });
+}
+.advantage_one__title {
+   padding-bottom: 10px;
+}
+.advantage_one__text {
+   .golos-regular();
+   font-size: 20px;
+   
+}

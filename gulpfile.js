@@ -120,8 +120,7 @@ let gridOptions = {
          width: "1350px"
       },
       xxl: {
-         width: "1200px",
-         fields: "40px"
+         width: "1200px"
       },
       xl: {
          width: "1150px"
