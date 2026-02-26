@@ -9,8 +9,11 @@
    margin-left: auto;
 }
 
-.block_blue {
+.block-blue {
    background-color: @color-blue-light;
+}
+.block-gray {
+   background-color: @back-gray-light;
 }
 
 .line {
@@ -24,6 +27,28 @@
    padding-right: 20px;
    width: 100%;
    
-   margin-top: 110px;
+   margin-top: 140px;
    margin-bottom: 110px;
+}
+
+.hidden_text {
+   .golos-regular();
+   padding-top: 25px;
+}
+.show {
+   font-size: 18px;
+   color: #1f5bff;
+   cursor: pointer;
+   border-bottom: dashed 1px currentcolor;
+   text-decoration: none;
+   display: inline;
+   
+}
+.hidden {
+   display: block;
+   font-size: 18px;
+   padding-top: 15px;
+   color: #000;
+   
+   display: none;
 }

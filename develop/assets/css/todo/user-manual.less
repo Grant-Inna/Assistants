@@ -2,7 +2,9 @@
    font-size: 18px;
    line-height: 26px;
    
-   padding-top: 20px;
+   p {
+      padding-top: 20px;
+   }
  
 }
 .about-gray {
@@ -19,6 +21,12 @@
 }
 .about-900 {
    max-width: 960px;
+}
+.about-1000 {
+   max-width: 1020px;
+}
+.about-1100 {
+   max-width: 1120px;
 }
 
 .user_manual__themes {
@@ -40,4 +48,15 @@
    border-radius: 30px;
    background-color: @back-gray;
    color: #000000;
+}
+
+.todo-link {
+   display: inline !important;
+   margin-bottom: 0.3rem;
+   border-bottom: 1px solid rgb(219, 219, 219);
+   transition: .2s border-bottom-color;
+}
+.todo-link:hover {
+   border-bottom-color: rgb(205, 205, 205);
+   transition: .2s border-bottom-color;
 }

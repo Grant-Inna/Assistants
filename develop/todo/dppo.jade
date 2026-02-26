@@ -9,6 +9,17 @@ html
 
       .wrapper.mt7.mb5
          h1.h2 Курсы повышения квалификации для педагогов (ДППО)
-         .user_manual__about.about-dark
+         .user_manual__about.about-dark.about-900
+            p Раздел для хранения и&nbsp;управления информацией о&nbsp;курсах повышения квалификации для педагогов, чтобы учителя легко находили подходящие программы обучения в&nbsp;одном месте.
+            p В автоматизированном режиме обеспечена передача сведений о&nbsp;программах ДППО из&nbsp;
+               a( href='https://education.apkpro.ru//' target='_blank').todo-link Цифровой экосистемы дополнительного профессионального образования
+               | . Однако, при необходимости, администраторы и&nbsp;методисты могут добавлять программы вручную.
+
+
+            include ../assets/jade/content/todo/__hidden-text
+            +hidden( '', '')
             
          .line
+
+
+      include ../assets/jade/static/script
