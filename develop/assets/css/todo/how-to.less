@@ -77,12 +77,7 @@
 }
 .open .how-to__block_circle {
    transform: rotate(-45deg);
-   background-color: @color-blue-hover;
    transition: all .2s;
-   &:before,
-   &:after {
-      background-color: white;
-   }
 }
 
 
@@ -96,3 +91,26 @@
    
    display: none;
 }
+
+.how-to__img {
+}
+
+.how-to__ul {
+   padding-left: 20px;
+   margin-bottom: 15px;
+}
+.how-to__ul li {
+   list-style-type: disc;
+}
+.how-to__li {
+   margin-left: 20px;
+}
+.how-to__li,
+.how-to__text {
+   .golos-regular();
+   color: black;
+
+   font-size: 16px;
+   line-height: 1.5;
+}
+

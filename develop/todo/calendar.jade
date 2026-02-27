@@ -25,17 +25,23 @@ html
             p Как добавить событие в разделе «Календарь»
 
          include ../assets/jade/content/todo/__how-to_headline
-         include ../assets/jade/content/todo/__how-to_content
+         include ../assets/jade/content/todo/__how-to_content-dot
          include ../assets/jade/content/todo/__how-to_content-img
          section.how-to__holder
             article.how-to__block
                +headline( '1. Тут название блока')
                .how-to__content_holder.hidden
                   +content-img( 'calendar', '1')
+                  ul.how-to__ul
+                     +content-dot( 'Какой-то текст ')
             article.how-to__block
                +headline( '2. Тут название блока')
                .how-to__content_holder.hidden
                   +content-img( 'calendar', '2')
+                  ul.how-to__ul
+                     +content-dot( 'Какой-то текст с <b>выделением</b> ')
+                  .how-to__text Просто текст ещё
 
 
       include ../assets/jade/static/script
+      include ../assets/jade/footer/footer-pages
