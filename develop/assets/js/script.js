@@ -7,14 +7,20 @@ $(document).ready(function () {
       $parent.on('click', (event) => {openAnswer($(event.target).closest($parent))});
    }
    
+   if ($('.how-to__block').length > 0) {
+      let $parent = $('.how-to__block');
+      
+      $parent.on('click', (event) => {openAnswer($(event.target).closest($parent))});
+   }
+   
       function openAnswer(target) {
          let hidden = $(target).find('.hidden');
          
          if ($(target).hasClass('open')) {
-            $(target).find(hidden).slideUp(400); // ради чего всё затевалось - показать скрытое
+            $(target).find(hidden).slideUp(300); // ради чего всё затевалось - показать скрытое
             $(target).removeClass('open');
          } else {
-            $(target).find(hidden).slideDown(400);
+            $(target).find(hidden).slideDown(200);
             $(target).addClass('open');
          }
       }

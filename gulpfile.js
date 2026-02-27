@@ -87,6 +87,7 @@ function watch(done){
    gulp.watch( base + '*.jade', html);
    gulp.watch( base + 'todo/*.jade', todo);
    gulp.watch( src + 'jade/**/*.jade', html);
+   gulp.watch( src + 'jade/**/**/__*.jade', html);
    gulp.watch( src + 'data/*', data);
    gulp.watch( src + 'data/**/*', data);
    gulp.watch( src + 'js/*', js);

@@ -19,5 +19,23 @@ html
 
          .line
 
+      .wrapper
+         .h4 Публикация мероприятий
+         .how-to__about.about-gray
+            p Как добавить событие в разделе «Календарь»
+
+         include ../assets/jade/content/todo/__how-to_headline
+         include ../assets/jade/content/todo/__how-to_content
+         include ../assets/jade/content/todo/__how-to_content-img
+         section.how-to__holder
+            article.how-to__block
+               +headline( '1. Тут название блока')
+               .how-to__content_holder.hidden
+                  +content-img( 'calendar', '1')
+            article.how-to__block
+               +headline( '2. Тут название блока')
+               .how-to__content_holder.hidden
+                  +content-img( 'calendar', '2')
+
 
       include ../assets/jade/static/script
