@@ -32,10 +32,11 @@ $(document).ready(function () {
       $trigger.on( 'click', (event) => {openPopup($(event.target).closest($trigger).data('popup'))});
       $('.popup__holder').on( 'click', (event) => {closePopup(event)})
    }
+   var width = window.innerWidth - document.documentElement.offsetWidth;
    function openPopup(target) {
       $('.popup__main_holder').hide();
       $('#back').show();
-      $('body').addClass('block-overflow');
+      $('body').addClass('block-overflow').css('padding-right', width);
       $('.popup__main_holder#' + target).show();
       // let popup = $(target).data('popup');
       
@@ -49,7 +50,7 @@ $(document).ready(function () {
          return;
       }
       $('#back').hide();
-      $('body').removeClass('block-overflow');
+      $('body').removeClass('block-overflow').css('padding-right', 0);
       console.log($(event.target));
    }
 });
