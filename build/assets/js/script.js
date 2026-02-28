@@ -25,5 +25,31 @@ $(document).ready(function () {
          }
       }
       
-  
+   
+   
+   if ($('.project_sections__holder').length > 0) {
+      let $trigger = $('.project_section__text');
+      $trigger.on( 'click', (event) => {openPopup($(event.target).closest($trigger).data('popup'))});
+      $('.popup__holder').on( 'click', (event) => {closePopup(event)})
+   }
+   function openPopup(target) {
+      $('.popup__main_holder').hide();
+      $('#back').show();
+      $('body').addClass('block-overflow');
+      $('.popup__main_holder#' + target).show();
+      // let popup = $(target).data('popup');
+      
+      // console.log($(popup));
+      
+      
+   }
+   function closePopup(event) {
+      event.stopPropagation();
+      if (!$(event.target).hasClass('popup__holder')) {
+         return;
+      }
+      $('#back').hide();
+      $('body').removeClass('block-overflow');
+      console.log($(event.target));
+   }
 });

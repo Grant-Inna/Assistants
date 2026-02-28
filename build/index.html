@@ -22,22 +22,22 @@
               <article class="project_section__block"><img src="assets/data/main/uche.webp" class="project_section__img">
                 <div class="project_section__title">Помощник ученика</div><a href="https://student.edu.ru/" target="_blank" class="project_section__link"><span>Войти</span></a>
                 <div class="project_section__triggers">
-                  <div class="project_section__text">Подробнее</div>
-                  <div class="project_section__text">Видео</div>
+                  <div data-popup="uche-modal" class="project_section__text">Подробнее</div>
+                  <div data-popup="uche-video" class="project_section__text">Видео</div>
                 </div>
               </article>
               <article class="project_section__block"><img src="assets/data/main/uchi.webp" class="project_section__img">
                 <div class="project_section__title">Помощник учителя</div><a href="https://teacher.edu.ru/" target="_blank" class="project_section__link"><span>Войти</span></a>
                 <div class="project_section__triggers">
-                  <div class="project_section__text">Подробнее</div>
-                  <div class="project_section__text">Видео</div>
+                  <div data-popup="uchi-modal" class="project_section__text">Подробнее</div>
+                  <div data-popup="uchi-video" class="project_section__text">Видео</div>
                 </div>
               </article>
               <article class="project_section__block"><img src="assets/data/main/rodi.webp" class="project_section__img">
                 <div class="project_section__title">Помощник родителя</div><a href="https://parent.edu.ru/" target="_blank" class="project_section__link"><span>Войти</span></a>
                 <div class="project_section__triggers">
-                  <div class="project_section__text">Подробнее</div>
-                  <div class="project_section__text">Видео</div>
+                  <div data-popup="rodi-modal" class="project_section__text">Подробнее</div>
+                  <div data-popup="rodi-video" class="project_section__text">Видео</div>
                 </div>
               </article>
       </section>
@@ -121,6 +121,17 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div id="back">
+      <div class="popup__holder">
+        <div class="popup__cross"></div>
+        <div id="uche-modal" class="popup__main_holder"><img src="./assets/data/popup/popup1.webp" class="popup__main_img"></div>
+        <div id="uche-video"></div>
+        <div id="uchi-modal" class="popup__main_holder"><img src="./assets/data/popup/popup2.png" class="popup__main_img"></div>
+        <div id="uchi-video"></div>
+        <div id="rodi-modal" class="popup__main_holder"><img src="./assets/data/popup/popup3.png" class="popup__main_img"></div>
+        <div id="rodi-video"></div>
       </div>
     </div>
     <script src="./assets/js/jquery.js"></script>
