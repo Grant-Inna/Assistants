@@ -45,7 +45,7 @@ $(document).ready(function () {
       $('.back__line').css('width', width).fadeIn(100);
       
       $('body').addClass('block-overflow').css('padding-right', width);
-      $('.popup__main_holder#' + target).show().removeClass('popup-animate');
+      $('.popup__main_holder#' + target).fadeIn(0).removeClass('popup-animate');
    }
    function closePopup(event) {
       event.stopPropagation();
@@ -57,6 +57,5 @@ $(document).ready(function () {
       $('body').removeClass('block-overflow').css('padding-right', 0);
       $('#back').fadeOut(200);
       $('.back__line').fadeOut(50);
-      
    }
 });

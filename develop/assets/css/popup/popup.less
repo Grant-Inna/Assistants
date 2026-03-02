@@ -71,8 +71,8 @@
    max-width: 760px;
    width: 100%;
    //min-height: 40vh;
-   margin: 5vh auto 10vh;
-   
+   margin: 10vh auto 10vh;
+   transform: none;
    //background-color: white;
    .tr();
    cursor: default;
@@ -83,6 +83,7 @@
    });
 }
 .popup-animate {
+   transform: scale(0.8);
    opacity: 0;
    margin-top: 50vh;
    .tr();
@@ -100,4 +101,7 @@
 .popup_video {
    .flex-center();
    margin: auto;
+}
+.popup_video.popup-animate {
+   //margin-top: 70vh;
 }
