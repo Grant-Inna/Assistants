@@ -32,30 +32,45 @@ $(document).ready(function () {
       $trigger.on( 'click', (event) => {openPopup($(event.target).closest($trigger).data('popup'))});
       $('.popup__holder').on( 'click', (event) => {closePopup(event)})
    }
-   var width = 0;
    
+   var width = 0;
    function openPopup(target) {
+      let current = $('.popup__main_holder#' + target);
+      
       if (window.innerWidth > document.documentElement.offsetWidth) {
          width = window.innerWidth - document.documentElement.offsetWidth;
       }
       
-      // console.log(width);
       $('.popup__main_holder').addClass('popup-animate').hide();
       $('#back').fadeIn(100);
       $('.back__line').css('width', width).fadeIn(100);
       
       $('body').addClass('block-overflow').css('padding-right', width);
-      $('.popup__main_holder#' + target).fadeIn(0).removeClass('popup-animate');
+      $(current).fadeIn(0).removeClass('popup-animate');
    }
    function closePopup(event) {
       event.stopPropagation();
       if (!$(event.target).hasClass('popup__holder')) {
          return;
       }
-
+      
       $('.popup__main_holder').addClass('popup-animate');
       $('body').removeClass('block-overflow').css('padding-right', 0);
-      $('#back').fadeOut(200);
+      $('#back').fadeOut(400);
       $('.back__line').fadeOut(50);
+      
+      if ($('.iframe_holder').length > 0) {
+         $.map( $('.iframe_holder'), (elem) => {
+            // console.log('убираем ссылки ');
+            $(elem).find('iframe').prop( 'src', '');
+         
+            // console.log('и сразу возвращаем ');
+            let link = $(elem).data('video');
+            return $(elem).find('iframe').prop( 'src', link);
+         
+         });
+      }
+   
+   
    }
 });
