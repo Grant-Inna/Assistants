@@ -59,9 +59,8 @@ $(document).ready(function () {
       $('#back').fadeOut(400);
       $('.back__line').fadeOut(50);
       
-      if ($('#back .iframe_holder').length > 0) {
-         $.map( $('#back   .iframe_holder'), (elem) => {
-            // console.log('убираем ссылки ');
+      if ($('.popup__main_holder .iframe_holder').length > 0) {
+         $.map( $('.popup__main_holder .iframe_holder'), (elem) => {
             $(elem).find('iframe').prop( 'src', '');
          
             // console.log('и сразу возвращаем ');
