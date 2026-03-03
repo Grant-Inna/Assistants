@@ -59,8 +59,8 @@ $(document).ready(function () {
       $('#back').fadeOut(400);
       $('.back__line').fadeOut(50);
       
-      if ($('.iframe_holder').length > 0) {
-         $.map( $('.iframe_holder'), (elem) => {
+      if ($('#back .iframe_holder').length > 0) {
+         $.map( $('#back   .iframe_holder'), (elem) => {
             // console.log('убираем ссылки ');
             $(elem).find('iframe').prop( 'src', '');
          
