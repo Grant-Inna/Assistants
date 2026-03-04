@@ -8,8 +8,8 @@ html
       include assets/jade/header/menu
 
       .wrapper.mt7.mb5
-         h1.h1.center Цифровые помощники
-         .project_about.center.mt3 &laquo;Цифровые помощники&raquo;&nbsp;&mdash; это новые федеральные сервисы для&nbsp;учеников, учителей и&nbsp;родителей. Вход доступен через ФГИС &laquo;Моя школа&raquo;, &laquo;ВКонтакте&raquo; или региональные информационные системы
+         h1.h1.center.load-top Цифровые помощники
+         .project_about.mt3.load-top &laquo;Цифровые помощники&raquo;&nbsp;&mdash; это новые федеральные сервисы для&nbsp;учеников, учителей и&nbsp;родителей. Вход доступен через ФГИС &laquo;Моя школа&raquo;, &laquo;ВКонтакте&raquo; или региональные информационные системы
 
          include assets/jade/content/main/__section
          section.project_sections__holder.mt4
@@ -18,7 +18,7 @@ html
             +section( 'Помощник родителя', 'rodi', 'https://parent.edu.ru/')
 
       .block-blue.mb6
-         .wrapper.pt6
+         .wrapper.pt6.load-totop
             h2.h3.center.mb4 Преимущества сервисов
 
             include assets/jade/content/main/__advantage
@@ -32,14 +32,15 @@ html
       .wrapper
          h2.h3.center.mb7 Методическая поддержка
 
-         include assets/jade/content/main/__support
+      include assets/jade/content/main/__support
+      .support__wrapper
          section.support__holder
             +support( 'ученика', '1', 'https://s3-pilot.assistants.edu.ru/doc/%D0%9F%D0%BB%D0%B0%D0%BA%D0%B0%D1%82_%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F_%D0%A6%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BE%D0%B9_%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D0%BD%D0%B8%D0%BA_%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%BA%D0%B0.pdf')
             +support( 'учителя', '2', 'https://s3-pilot.assistants.edu.ru/doc/%D0%9F%D0%BB%D0%B0%D0%BA%D0%B0%D1%82_%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F_%D0%A6%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BE%D0%B9_%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D0%BD%D0%B8%D0%BA_%D1%83%D1%87%D0%B8%D1%82%D0%B5%D0%BB%D1%8F.pdf')
             +support( 'родителя', '3', 'https://s3-pilot.assistants.edu.ru/doc/%D0%9F%D0%BB%D0%B0%D0%BA%D0%B0%D1%82_%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F_%D0%A6%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BE%D0%B9_%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D0%BD%D0%B8%D0%BA_%D1%80%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8F.pdf')
 
-
-         .video__holder.mt8
+      .wrapper.mt9
+         .video__holder
 
             .video_wrapper
                .video_relative

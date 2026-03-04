@@ -1,5 +1,6 @@
 $(document).ready(function () {
    /* читать дальше */
+
    
    if ($('.hidden_text').length > 0) {
       let $parent = $('.hidden_text');
@@ -69,7 +70,39 @@ $(document).ready(function () {
          
          });
       }
-   
-   
    }
+   
+   slickIt();
+   $(window).resize(() => {
+        slickIt();
+    });
+      
+   
+   function slickIt() {
+      if (window.innerWidth < 800) {
+         let $holder = $('.support__holder');
+         $holder.slick({
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            speed: 700,
+            infinite: true,
+            autoplay: false,
+            arrows: false,
+            dots: true,
+            responsive: [
+               {
+                  breakpoint: 520,
+                  settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1
+                  }
+               }
+            ]
+            
+         });
+      } else {
+         $holder.slick('unslick');
+      }
+   }
+   
 });
