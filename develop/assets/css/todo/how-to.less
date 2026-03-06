@@ -34,6 +34,7 @@
 }
 
 .how-to__block_title {
+   text-align: left;
    line-height: 1.35;
    color: #000;
 }
@@ -98,12 +99,16 @@
 ul {
    padding-left: 20px;
    margin-bottom: 12px;
+   .smmd-block({ padding-left: 14px });
+   .xs-block({ padding-left: 8px });
 }
 ul li {
    list-style-type: disc;
 }
 .how-to__li {
    margin-left: 20px;
+   .smmd-block({ margin-left: 14px });
+   .xs-block({ margin-left: 8px });
 }
 .how-to__li,
 .how-to__text {
@@ -113,5 +118,13 @@ ul li {
    font-size: 16px;
    line-height: 1.5;
    margin-bottom: 4px;
+}
+.how-to__line {
+   .golos-regular();
+   color: black;
+
+   font-size: 16px;
+   line-height: 1.5;
+   //margin-bottom: 4px;
 }
 
