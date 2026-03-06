@@ -20,6 +20,24 @@ html
 
          .line
 
+      .wrapper.pb6
+         .h4
+         .how-to__about.about-gray
+            p
+
+         include ../assets/jade/content/todo/__how-to_headline
+         include ../assets/jade/content/todo/__how-to_content-dot
+         include ../assets/jade/content/todo/__how-to_content-img
+         section.how-to__holder
+            article.how-to__block
+               +headline( '')
+               .how-to__content_holder.hidden
+                  +content-img( 'calendar', '1')
+                  ul.how-to__ul
+                     +content-dot( '')
+                     +content-dot( '')
+
+
 
       include ../assets/jade/static/script
       include ../assets/jade/footer/footer-pages
