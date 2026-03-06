@@ -90,6 +90,8 @@ function watch(done){
    gulp.watch( src + 'jade/**/**/__*.jade', html);
    gulp.watch( src + 'data/*', data);
    gulp.watch( src + 'data/**/*', data);
+   gulp.watch( src + 'data/**/**/*', data);
+   gulp.watch( src + 'data/**/**/**/*', data);
    gulp.watch( src + 'js/*', js);
    done();
 }
