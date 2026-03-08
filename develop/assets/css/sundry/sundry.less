@@ -54,3 +54,28 @@
 }
 
 
+.flex_holder {
+   .flex();
+   .justify-between();
+   .smmd-block({
+      .column();
+   });
+}
+.half {
+   &:last-of-type {
+      width: 56%;
+      .smmd-block({
+         width: 100%;
+      });
+   };
+   width: 40%;
+   .smmd-block({
+      width: 100%;
+   });
+   
+   &:first-of-type {
+      .smmd-block({
+         margin-bottom: 6px;
+      });
+   };
+}

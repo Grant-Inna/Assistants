@@ -40,10 +40,15 @@
 }
 .how-to__block_circle {
    position: relative;
+   max-width: 40px;
+   min-width: 40px;
+   max-height: 40px;
+   min-height: 40px;
    width: 40px;
    height: 40px;
    border-radius: 50px;
    transition: background-color .2s;
+   flex-shrink: 0;
 }
 .how-to__block_circle:before,
 .how-to__block_circle:after {
@@ -59,14 +64,14 @@
    height: 2px;
    top: 20px;
    left: 21px;
-   transform: translateX(-50%) translateY(-50%);
+   transform: translateX(-51%) translateY(-50%);
 }
 .how-to__block_circle:after {
    width: 2px;
    height: 20px;
    top: 20px;
    left: 20px;
-   transform: translateY(-50%);
+   transform: translateX(-41%) translateY(-50%);
 }
 .how-to__block_headline:hover .how-to__block_circle {
    background-color: @color-blue-hover;
@@ -128,3 +133,21 @@ ul li {
    //margin-bottom: 4px;
 }
 
+ol.how-to__ol {
+   margin-block-start: 0;
+   margin-block-end: 0;
+   padding-inline-start: 0;
+   margin-bottom: 12px;
+   
+   .how-to__li {
+      .golos-regular();
+      color: black;
+      
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 4px;
+   }
+   .how-to__li b {
+      .golos-bold()
+   }
+}
